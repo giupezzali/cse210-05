@@ -57,8 +57,8 @@ class Cycle(Actor):
         self._segments[0].set_velocity(velocity)
     
     def _prepare_body(self):
-        # x = 0.0
-        # y = 0.0
+        x = 0.0
+        y = 0.0
 
         # if self._cycle_color == constants.RED:
         #     x = int(constants.MAX_X / 6)
@@ -66,9 +66,13 @@ class Cycle(Actor):
         # else:
         #     x = int(constants.MAX_X / 3)
         #     y = int(constants.MAX_Y / 3)
-
-        x = int(constants.MAX_X / 2)
-        y = int(constants.MAX_Y / 2)
+        if self._cycle_color == constants.CYAN:
+            x = int(constants.MAX_X / 2)
+            y = int(constants.MAX_Y / 2)
+        else:
+            x = int(constants.MAX_X / 4)
+            y = int(constants.MAX_Y / 4)
+        
 
         for i in range(constants.SNAKE_LENGTH):
             position = Point(x - i * constants.CELL_SIZE, y)
