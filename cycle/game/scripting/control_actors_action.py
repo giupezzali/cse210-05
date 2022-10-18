@@ -58,9 +58,10 @@ class ControlActorsAction(Action):
             self._direction2 = Point(0, constants.CELL_SIZE)
 
         
-        
+        #player one keyboard
         cycle = cast.get_second_actor("cycles")
         cycle.turn_head(self._direction)
 
+        #player two keyboard
         cycle2 = cast.get_first_actor("cycles")
         cycle2.turn_head(self._direction2)

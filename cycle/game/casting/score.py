@@ -10,7 +10,10 @@ class Score(Actor):
     representation of the points earned.
 
     Attributes:
+        _player (str): Identifies the player to display the score.
         _points (int): The points earned in the game.
+        _position: The position to display the score.
+
     """
     def __init__(self, position, player):
         super().__init__()

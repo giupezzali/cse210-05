@@ -33,7 +33,7 @@ class HandleCollisionsAction(Action):
             self._handle_game_over(cast)
 
     def _handle_food_collision(self, cast):
-        """Updates the score nd moves the food if the snake collides with the food.
+        """Updates the score and moves the food if the snake collides with the food.
         
         Args:
             cast (Cast): The cast of Actors in the game.
@@ -58,7 +58,7 @@ class HandleCollisionsAction(Action):
             food.reset()
 
     def _handle_other_cycle_collision(self, cast):
-        """Sets the game over flag if the snake collides with one of its segments.
+        """Sets the game over flag if the cycle collides with the other cycle.
         
         Args:
             cast (Cast): The cast of Actors in the game.
